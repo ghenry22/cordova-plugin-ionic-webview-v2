@@ -236,6 +236,8 @@ NSTimer *timer;
 
 - (WKWebViewConfiguration*) createConfigurationFromSettings:(NSDictionary*)settings
 {
+    NSString* _BGStatus;
+
     WKWebViewConfiguration* configuration = [[WKWebViewConfiguration alloc] init];
     configuration.processPool = [[CDVWKProcessPoolFactory sharedFactory] sharedProcessPool];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
